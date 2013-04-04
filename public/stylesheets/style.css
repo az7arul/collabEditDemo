@@ -1,0 +1,28 @@
+body {
+	background-color: white; 
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.modules .checkbox {
+	float: right;
+}
+
+.no {
+	background-color: red;
+	color: red;
+}
+
+
+input.no {
+	display: none;
+}
+
+.description {
+	min-height: 150px;
+}

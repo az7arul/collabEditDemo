@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script src='http://jquery-json.googlecode.com/files/jquery.json-2.2.min.js'></script>
+	  <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+	  <% mc = [] %>
+	  <% for(var i = 0; i < modules.length; i++) {%>
+		   <% mc[i] = ''%>
+			 <% if ((modules[i].lockedBy != 0 && modules[i].lockedBy != user.id)) {%>
+			     <% mc[i] = 'no'%> 
+			  <% } %>
+	  <%};%>
+	
+		<% if (message != '') { %>
+			
+			<div class="alert alert-error">
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <%= message %>
+			</div>
+		
+		<% } %>
+		
+		
+    <h1>Welcome <span id="username"><%= user.username %></span></h1>
+    <div class="container span9">
+			<% for(var i = 0; i < modules.length; i++) {%>
+				<div id="module-<%= modules[i].id%>" class='well modules <%= mc[i] %>'>
+						<input  id='checkbox-<%= modules[i].id %>' class='checkbox <%=mc[i]%>' type="checkbox" name="option2" value="Edit">
+					  <h1>Module <%= modules[i].id%></h1>
+					
+				  <div class="description well" id="moduledesc-<%= modules[i].id %>">
+						<%= modules[i].desc %>
+					</div>
+				
+					<form action="/module/<%= modules[i].id%>" method='post'>
+						<textarea rows="3" id='module<%=modules[i].id%>desc' name='desc'
+							 value="<%= modules[i].desc %>" class='span8'></textarea></br>
+						<input class='bTN btn-primary' type='submit' value='save'>
+					</form>
+				</div>
+			<% };%>
+	  </div>
+	
+	<script src="/javascripts/main.js"></script>
+  </body>
+</html>

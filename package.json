@@ -1,0 +1,23 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.1.0",
+    "ejs": "*",
+    "redis": "~0.8.2",
+    "hiredis": "~0.1.15",
+    "socket.io": "~0.9.14",
+    "jasmine-node": "~1.4.0",
+    "request": "~2.16.6",
+    "cheerio": "~0.10.8",
+    "passport-local": "~0.1.6",
+    "passport": "~0.1.16",
+    "mongoose": "~3.6.2",
+    "connect-flash": "~0.1.0",
+    "socket.io-client": "~0.9.11"
+  }
+}

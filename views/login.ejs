@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Sign In </title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+</head>
+
+<body>
+	<div class='container'>
+	<% if (message != '') { %>
+		
+		<div class="alert alert-error">
+		  <button type="button" class="close" data-dismiss="alert">&times;</button>
+		  <%= message %>
+		</div>
+	
+	<% } %>
+	<div class='offset2'>
+	<h1> Sign In </h1></br>
+	</div>
+	<form class='form-horizontal' action="/login" method="post">
+	  <div class="control-group">
+	    <label class="control-label" for="inputEmail">Email</label>
+	    <div class="controls">
+		    <input type="text" name="username" placeholder="Email">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="inputPassword">Password</label>
+	    <div class="controls">
+	      <input type="password" name='password' placeholder="Password">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <div class="controls">
+	      <button type="submit" class="btn">Sign in</button>
+	    </div>
+	  </div>
+	</form>
+</div>
+	<script src="/javascripts/bootstrap.min.js"></script>
+</body>
+</html>
