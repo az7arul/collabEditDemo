@@ -2,6 +2,7 @@ var modules = [
   {id: 1, desc: 'Default description for module 1', lockedBy: 0}
 , {id: 2, desc: 'Default description for module 2', lockedBy: 0}
 , {id: 3, desc: 'Default description for module 3', lockedBy: 0}
+, {id: 4, desc: 'Default description for module 4', lockedBy: 0}
 ];
 
 var findModuleById = function(id, fn) {
