@@ -17,7 +17,7 @@ describe("User ", function() {
 	
 	it('should return a user by username', function() {
 		findUserByUsername('azhar', function(err, user) {
-			expect(user.username).toBe('azharx');
+			expect(user.username).toBe('azhar');
 		});
 	});
 });
